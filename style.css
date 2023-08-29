@@ -19,7 +19,7 @@ body {
 form {
     background-color: #5c2ed9;
     width: 400px;
-    display: block;
+    display: none;
     padding: 20px;
     margin: 20px auto;
     border-radius: 5px;
@@ -27,6 +27,28 @@ form {
 }
 
 #sloth { display: block; margin: 0 auto; margin-top: 50px; }
+
+#button-container {
+    display: flex;
+}
+
+#click1, #click2 {
+    background-color: #0e0213;
+    margin-right: 25px;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#click2 {
+    margin-right: 0;
+}
+
+
 
 #submit-button {
     background-color: #0e0213;
