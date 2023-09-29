@@ -1,0 +1,46 @@
+<!-- We add the data in XML which will be fetched asynchronously. -->
+<data>
+<customer id="1">
+    <name>Aditi Sharma</name>
+    <address>Plot no 118,Rutuja Park Society</address>
+    <phno>8999921621</phno>
+</customer>
+
+<customer id="2">
+    <name>Rhucha Sant</name>
+    <address>Flat No.1201, Sai Laurel Society</address>
+    <phno>8995462176</phno>
+</customer>
+
+<customer id="3">
+    <name>Ananya Bhat</name>
+    <address>Plot no 118,Rutuja Park Society</address>
+    <phno>8999921621</phno>
+</customer>
+
+<customer id="4">
+    <name>Amruta Agarwal</name>
+    <address>Guru Ganesh Society,Gangadham</address>
+    <phno>8999921621</phno>
+</customer>
+
+<customer id="5">
+    <name>Bhavini Mathur</name>
+    <address>1234 Elm Street, Springfield, IL 62701</address>
+    <phno>8999921621</phno>
+</customer>
+
+<customer id="6">
+    <name>Shreya Agrawal</name>
+    <address>1357 Cedar Avenue, Miami, FL 33101</address>
+    <phno>8999921621</phno>
+</customer>
+
+<customer id="7">
+    <name>Vedant Dandage</name>
+    <address>Waha Jaha koi Aata Jata ho nahi!!</address>
+    <phno>8745129364</phno>
+</customer>
+
+
+</data>
