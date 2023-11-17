@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.bing.com/images/search?view=detailV2&ccid=FOvjyY%2bv&id=0590B7C4976C131FD7188B2D04D0B2B8A56A02AF&thid=OIP.FOvjyY-vs0XWnM9u5rv1TAHaHa&mediaurl=https%3a%2f%2fwww.publicdomainpictures.net%2fpictures%2f130000%2fvelka%2fcheck-mark-icon.jpg&exph=1920&expw=1920&q=tick+mark&simid=608041548595887836&FORM=IRPRST&ck=1A2903FD363BE95474D0FF4E95256F93&selectedIndex=0">
+</head>
+<body>
+    <h1 style="text-align: center;">Welcome to the Registration Desk</h1>
+    <img id="sloth" src="https://i.pinimg.com/originals/f3/be/aa/f3beaad18c35451dca7c623914e7d5df.gif" alt="hi">
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" autocomplete="username" id="username" name="username" required><br><br>
+
+
+        <label for="email">E-Mail:</label>
+        <input type="email" autocomplete="email" id="email" name="email" required><br><br>
+
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">LGBTQ+</option>
+        </select><br><br>
+
+
+        <button type="submit" id="submit-button">Submit</button>
+    </form>
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const birthdate = document.getElementById('birthdate');
+            const gender = document.getElementById('gender');
+
+
+            let isValid = true;
+
+
+            if (username.value.trim() === '') {
+                isValid = false;
+                alert('Please enter a username.');
+            }
+
+
+            if (!isValidEmail(email.value)) {
+                isValid = false;
+                alert('Please enter a valid email.');
+            }
+
+
+            if (!isValidPhoneNumber(phone.value)) {
+                isValid = false;
+                alert('Please enter a valid phone number.');
+            }
+
+
+            if (!isValidBirthdate(birthdate.value)) {
+                isValid = false;
+                alert('Please enter a valid birthdate.');
+            }
+
+
+            if (gender.value === '') {
+                isValid = false;
+                alert('Please select a gender.');
+            }
+
+
+            return isValid;
+        }
+
+
+        function isValidEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+
+
+        function isValidPhoneNumber(phone) {
+            const phonePattern = /^[0-9]{10}$/;
+            return phonePattern.test(phone);
+        }
+
+
+        function isValidBirthdate(birthdate) {
+            const inputDate = new Date(birthdate);
+            const currentDate = new Date();
+            return inputDate <= currentDate;
+        }
+    </script>
+</body>
+</html>
